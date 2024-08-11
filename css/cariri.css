@@ -1,0 +1,692 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(../public/images/capa_2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap:30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav .menu li {
+    flex-shrink: 0;
+}
+
+nav .menu li a {
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.54px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+    padding: 0.5rem;
+}
+
+nav .menu li a:hover,
+nav .menu li:focus-within a {
+    border-bottom: 3px solid #000000;
+}
+
+.logo {
+    margin-top: 0.3rem;
+}
+
+.audio-player {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#play-pause-btn {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.54px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    z-index: 12;
+}
+
+#play-pause-btn:focus {
+    outline: none;
+}
+
+#play-pause-btn.playing {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid transparent;
+}
+
+.logo {
+    width: 62px;
+    height: 30px;
+}
+
+/* Menu Hambúrguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #FFF;
+    margin: 3px 0;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    padding: 8rem;
+}
+
+h1 {
+    color: #BE1E2D;
+    font-family: Montserrat;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 117%;
+    letter-spacing: 4px;
+}
+
+h2 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 117%;
+    letter-spacing: 3.2px;
+}
+
+span {
+    color: #BE1E2D;
+    font-family: Montserrat;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 117%;
+    letter-spacing: 3.2px;
+}
+
+
+.section-shows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+   
+
+
+}
+
+.cards-shows {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    
+}
+
+.card_shows_cariri {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(../public/images/shows.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    width: 417px;
+    height: 457px;
+    border-radius: 21px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+h3 {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(1.5rem, 2.5vw, 2.125rem);
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0.1rem;
+    text-align: left;
+}
+
+p {
+    color: #000;
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(1.2rem, 2vw + 0.5rem, 1.5rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.52;
+    letter-spacing: 0.075rem;
+}
+
+.oficinas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 99vw;
+    margin: 0;
+    padding: 0;
+}
+
+.oficinas_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(../public/images/oficinas.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    width: 1148px;
+    height: 606px;
+    border-radius: 21px;
+    padding: 2rem;
+}
+
+.card-text-oficinas {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #fff;
+    margin-left: 2rem;
+}
+
+.artImg {
+    display: flex;
+    margin: 4.1rem auto;
+}
+
+.card:last-child {
+    background: none;
+}
+
+.artImg2 {
+    display: flex;
+    margin: 4rem auto;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+.card {
+    width: 341px;
+    height: 534px;
+    background: #F7941D;
+    margin: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 9px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 9px;
+}
+
+
+
+.card a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+}
+
+.btn-topo {
+    display: none;
+    bottom: 20px;
+    right: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Geral para o container de patrocínio */
+.patrocinio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+/* Seção de logos de patrocínio */
+.patrocinio-logos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens na horizontal */
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+/* Itens individuais de patrocínio */
+.patrocinio-item {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo dentro do item */
+    align-items: center;
+}
+
+/* Agrupamento de logos */
+.patrocinio-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+}
+
+/* Estilo para as imagens de logo */
+.regua_logo {
+    width: 150px; /* Ajuste o tamanho padrão conforme necessário */
+    height: 150px; /* Define uma altura fixa para todas as imagens */
+    object-fit: contain; /* Mantém a proporção da imagem sem distorcer */
+    margin: 0 auto;
+}
+
+/* Estilo específico para as logos da Petrobras e Governo Federal */
+.petrobras-logo,
+.governo-federal-logo {
+    width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: 200px; /* Define uma altura maior para essas imagens */
+}
+
+/* Seção de conteúdo de patrocínio */
+.patrocinio-content {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+    padding-bottom: 1rem;
+    margin-top: 0; /* Ajusta a margem superior para garantir que não sobreponha outros elementos */
+}
+
+.patrocinio-content > div {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+}
+
+
+/* Estilo geral do footer */
+.footer {
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Texto branco */
+    width: 100%;
+    height: 50vh;
+    margin: 0 auto; /* Centraliza o footer na página */
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    padding: 0 2em; /* Espaçamento interno lateral */
+}
+
+/* Container do conteúdo do footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Espaça logo e newsletter */
+    width: 100%;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+    height: auto; /* Ajusta a altura conforme necessário */
+    padding: 2rem 0; /* Adiciona um pouco de espaçamento superior e inferior */
+}
+
+.footer-logo img {
+    width: 515px;
+    height: 248px;
+    object-fit: contain; /* Garante que a imagem se ajuste dentro do espaço sem distorção */
+}
+
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column; /* Coluna para o título e formulário */
+    justify-content: center; /* Alinha verticalmente */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-right: 5rem; /* Adiciona um espaçamento à esquerda para mover o conteúdo mais para a esquerda */
+    gap: 15px;
+}
+
+/* Estilo do título da newsletter */
+.footer-newsletter h4 {
+    color: #FFF;
+    text-align: left; /* Alinha o texto à esquerda */
+    font-family: Montserrat;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 90px */
+    letter-spacing: -0.66px;
+}
+
+/* Estilo do parágrafo da newsletter */
+.footer-newsletter p {
+    color: #FFF;
+    text-align: left; /* Alinha o texto à esquerda */
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 98%; /* 27.44px */
+    letter-spacing: -0.308px;
+}
+
+.footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha o botão à direita */
+    gap: 10px;
+}
+
+.footer-newsletter input[type="email"] {
+    width: 536px;
+    height: 66px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+.footer-newsletter button {
+    width: 118px;
+    height: 34px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 101%;
+    letter-spacing: -0.22px;
+    background-color: #FFF;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* Alinha o botão à direita */
+}
+
+.footer-newsletter button:hover {
+    background-color: #ddd;
+}
+
+/* Menu Responsivo para Celular */
+@media (max-width: 768px) {
+    header {
+        background-image: url(../public/images/capa_celular.png);
+        background-size: cover;
+    }
+
+    nav .menu.active {
+        display: flex;
+        padding: 4rem 0;
+    }
+
+    .audio-player {
+        margin-top: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #F7941D;
+        align-items: center;
+        overflow: hidden;
+    }
+
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-icon {
+        width: 30px;
+        height: 3px;
+        background-color: #000000;
+        margin: 3px 0;
+    }
+
+    .cards-shows {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card_shows_cariri {
+        width: 317px;
+        height: 357px;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        font-size: 3.5rem;
+
+    }
+
+    .oficinas_card {
+        background-image: url(../public/images/oficinas-celular.png);
+        width: 378px;
+        height: 804px;
+
+    }
+
+    .card-text-oficinas {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        margin-top: 3rem;
+    }
+
+}
+
+/* Menu Responsivo para Tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    nav .menu.active {
+        display: flex;
+        padding: 4rem 0;
+    }
+
+    .audio-player {
+        margin-top: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #F7941D;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-icon {
+        width: 30px;
+        height: 3px;
+        background-color: #000000;
+        margin: 3px 0;
+    }
+
+    header {
+        background-image: url(../public/images/capa_tablet.png);
+        background-size: cover;
+
+    }
+
+    .cards-shows {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .card_shows_cariri {
+        width: 100%;
+        max-width: 410px;
+        height: 450px;
+        margin-bottom: 1rem;
+    }
+
+    .card-text {
+        padding: 1rem;
+        height: 100%;
+        align-items: center;
+    }
+
+    h2 {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 117%;
+        letter-spacing: 3.2px;
+    }
+
+    span {
+        color: #BE1E2D;
+        font-family: Montserrat;
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 117%;
+        letter-spacing: 3.2px;
+    }
+
+    .oficinas_card {
+        background-image: url(../public/images/oficinas-mobile.png);
+        width: 812px;
+        height: 1089px;
+
+    }
+
+
+    .card-text-oficinas {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 97%;
+        height: 80%;
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+
+
+
+
+
+}

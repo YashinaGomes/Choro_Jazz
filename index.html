@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Choro Jazz 2024</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button class="menu-toggle" aria-label="Open menu">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            
+            <ul class="menu">
+                <li><a class="link" href="#inicio">Início</a></li>
+                <li><a class="link" href="#o_festival">O Festival</a></li>
+                <li><a class="link" href="#centro_cultural_sambaiba">Centro Cultural Sambaíba</a></li>
+                <li><img src="public/images/logo_nav.png" alt="Logo" class="logo" /></li>
+                <li><a class="link" href="#para">Pará</a></li>
+                <li><a class="link" href="#cariri">Cariri</a></li>
+                <li><a class="link" href="#fortaleza">Fortaleza</a></li>
+                <li><a class="link" href="#jericoacoara">Jericoacoara</a></li>
+            </ul>
+            <div class="audio-player">
+                <button id="play-pause-btn">&#10074;&#10074;</button> <!-- Inicia com Pause -->
+                <audio id="audio-player">
+                    <source src="New York Jazz Lounge - Bar Jazz Classics.mp3" type="audio/mp3">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </div>
+            
+              
+        </nav>
+    </header>
+    <main>
+        <section class="section-home">
+            <div class="container-home">
+                <h1 class="cultura">Ministério da Cultura e Petrobras apresentam</h1>
+                <img class="logo_capa" src="public/images/logo-capa.png" alt="Logo Capa" />
+
+                <div class="instruments-wrapper">
+                    <div class="music_piano">
+                        <!-- <img class="music" src="public/images/music.png" alt="Imagem Música" />
+                        <img class="piano" src="public/images/piano.png" alt="Imagem Piano" /> -->
+                    </div>
+
+                    <div class="sax_bass">
+                        <!-- <img class="bass" src="public/images/double-bass.png" alt="Imagem Bass" />
+                        <img class="saxophone" src="public/images/saxophone.png" alt="Imagem Saxophone" /> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sobre_o_festival">
+                <div class="texto_overlay">
+                    <div class="caixa_texto">
+                        <h2 class="titulo_festival">O Festival</h2>
+                        <p>
+                            Iniciado em 2009 sob cenário de uma das regiões mais belas do mundo, o Festival
+                            Choro Jazz segue
+                            inundando Jericoacoara e Fortaleza de música e cultura em suas mais diversas e
+                            genuínas formas.
+                            Uma das bases conceituais do festival é a importância da descentralização
+                            cultural.<br><br>
+                            <strong>Uma das bases conceituais do festival é a importância da descentralização
+                                cultural.</strong>
+                        </p>
+                        <a href="#" class="botao-conheca">
+                            <img src="public/images/seta.png" alt="Seta" class="seta-icon"> CONHEÇA
+                        </a>
+
+                    </div>
+                </div>
+            
+        </section>
+
+        <!-- <section class="sobre_o_festival">
+            <div class="sambaiba">
+                <img class="foto_sambaiba" src="public/images/foto_sambaiba.png" alt="Foto do Centro Cultural Sambaíba" />
+                <div class="texto_overlay2">
+                    <div class="caixa_texto">
+                        <h2 class="titulo_sambaiba">Centro Cultural Sambaíba</h2>
+                        <p>
+                            Firmando nosso compromisso com a democratização musical e oferecendo o melhor em termos de
+                            aprendizado, em 16 de janeiro de 2012 foi fundada a Escola de Música Choro Jazz, dando aulas
+                            gratuitas 03 vezes por semana com professores residentes na região e com mestres levados
+                            periodicamente para incentivar ainda mais os estudos.
+                        </p>
+                        <a href="#" class="botao-conheca">
+                            <img src="public/images/seta.png" alt="Seta" class="seta-icon"> CONHEÇA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        
+
+    </main>
+
+
+    <footer>
+        <!-- <p>&copy; 2024 Choro Jazz</p> -->
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/audio.js"></script>
+</body>
+
+</html>
