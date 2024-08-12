@@ -10,108 +10,188 @@
 </head>
 
 <body>
-    <header>
+    <header class="fade-in-up">
+
         <nav>
-            <button class="menu-toggle" aria-label="Open menu">
+            <button class="menu-toggle fade-in-up" aria-label="Open menu">
                 <span class="menu-icon"></span>
                 <span class="menu-icon"></span>
                 <span class="menu-icon"></span>
             </button>
-            
-            <ul class="menu">
-                <li><a class="link" href="#inicio">Início</a></li>
-                <li><a class="link" href="#o_festival">O Festival</a></li>
-                <li><a class="link" href="#centro_cultural_sambaiba">Centro Cultural Sambaíba</a></li>
-                <li><img src="public/images/logo_nav.png" alt="Logo" class="logo" /></li>
-                <li><a class="link" href="#para">Pará</a></li>
-                <li><a class="link" href="#cariri">Cariri</a></li>
-                <li><a class="link" href="#fortaleza">Fortaleza</a></li>
-                <li><a class="link" href="#jericoacoara">Jericoacoara</a></li>
+            <ul class="menu fade-in-up">
+                <li><a class="link fade-in-up" href="index.html">Início</a></li>
+                <li><a class="link fade-in-up" href="festival.html">O Festival</a></li>
+                <li><a class="link fade-in-up" href="sambaiba.html">Centro Cultural Sambaíba</a></li>
+                <li><img src="public/images/logo.png" alt="Logo" class="logo fade-in-up" /></li>
+                <li><a class="link fade-in-up" href="para.html">Pará</a></li>
+                <li><a class="link fade-in-up" href="cariri.html">Cariri</a></li>
+                <li><a class="link fade-in-up" href="fortaleza.html">Fortaleza</a></li>
+                <li><a class="link fade-in-up" href="jericoacoara.html">Jericoacoara</a></li>
             </ul>
-            <div class="audio-player">
-                <button id="play-pause-btn">&#10074;&#10074;</button> <!-- Inicia com Pause -->
+
+            <div class="audio-player fade-in-up">
+                <button id="play-pause-btn">&#10074;&#10074;</button>
                 <audio id="audio-player">
-                    <source src="New York Jazz Lounge - Bar Jazz Classics.mp3" type="audio/mp3">
+                    <source src="DÉO RIAN E REGIONAL IMPERIAL - 8ª EDIÇÃO FESTIVAL CHORO JAZZ.mp3" type="audio/mp3">
                     Seu navegador não suporta o elemento de áudio.
                 </audio>
             </div>
-            
-              
         </nav>
     </header>
-    <main>
-        <section class="section-home">
-            <div class="container-home">
-                <h1 class="cultura">Ministério da Cultura e Petrobras apresentam</h1>
-                <img class="logo_capa" src="public/images/logo-capa.png" alt="Logo Capa" />
 
-                <div class="instruments-wrapper">
-                    <div class="music_piano">
-                        <!-- <img class="music" src="public/images/music.png" alt="Imagem Música" />
-                        <img class="piano" src="public/images/piano.png" alt="Imagem Piano" /> -->
-                    </div>
+    <main class="fade-in-up">
 
-                    <div class="sax_bass">
-                        <!-- <img class="bass" src="public/images/double-bass.png" alt="Imagem Bass" />
-                        <img class="saxophone" src="public/images/saxophone.png" alt="Imagem Saxophone" /> -->
+        <section class="sobre_o_festival fade-in-up">
+            <div class="texto_overlay fade-in-up">
+                <div class="caixa_texto fade-in-up">
+                    <h2 class="titulo_festival fade-in-up">O Festival</h2>
+                    <p class="fade-in-up">
+                        Iniciado em 2009 sob cenário de uma das regiões mais belas do mundo, o Festival Choro Jazz segue
+                        inundando Jericoacoara e Fortaleza de música e cultura em suas mais diversas e genuínas formas.
+                        Uma das bases conceituais do festival é a importância da descentralização cultural.<br><br>
+                        <strong>Uma das bases conceituais do festival é a importância da descentralização
+                            cultural.</strong>
+                    </p>
+                    <div class="container-botao fade-in-up">
+                        <a href="festival.html" class="botao-conheca fade-in-up">
+                            <img src="public/images/seta.png" alt="Seta" class="seta-icon fade-in-up"> CONHEÇA
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="sobre_o_festival">
-                <div class="texto_overlay">
-                    <div class="caixa_texto">
-                        <h2 class="titulo_festival">O Festival</h2>
-                        <p>
-                            Iniciado em 2009 sob cenário de uma das regiões mais belas do mundo, o Festival
-                            Choro Jazz segue
-                            inundando Jericoacoara e Fortaleza de música e cultura em suas mais diversas e
-                            genuínas formas.
-                            Uma das bases conceituais do festival é a importância da descentralização
-                            cultural.<br><br>
-                            <strong>Uma das bases conceituais do festival é a importância da descentralização
-                                cultural.</strong>
-                        </p>
-                        <a href="#" class="botao-conheca">
-                            <img src="public/images/seta.png" alt="Seta" class="seta-icon"> CONHEÇA
-                        </a>
-
-                    </div>
-                </div>
-            
-        </section>
-
-        <!-- <section class="sobre_o_festival">
-            <div class="sambaiba">
-                <img class="foto_sambaiba" src="public/images/foto_sambaiba.png" alt="Foto do Centro Cultural Sambaíba" />
-                <div class="texto_overlay2">
-                    <div class="caixa_texto">
-                        <h2 class="titulo_sambaiba">Centro Cultural Sambaíba</h2>
-                        <p>
-                            Firmando nosso compromisso com a democratização musical e oferecendo o melhor em termos de
-                            aprendizado, em 16 de janeiro de 2012 foi fundada a Escola de Música Choro Jazz, dando aulas
-                            gratuitas 03 vezes por semana com professores residentes na região e com mestres levados
-                            periodicamente para incentivar ainda mais os estudos.
-                        </p>
-                        <a href="#" class="botao-conheca">
-                            <img src="public/images/seta.png" alt="Seta" class="seta-icon"> CONHEÇA
+        <section class="sobre_o_festival2 fade-in-up">
+            <div class="texto_overlay2 fade-in-up">
+                <div class="caixa_texto2 fade-in-up">
+                    <h2 class="titulo_sambaiba fade-in-up">Centro Cultural Sambaíba</h2>
+                    <p class="fade-in-up">
+                        Firmando nosso compromisso <br>com a democratização musical e oferecendo o melhor em termos de
+                        aprendizado, em 16 de janeiro de 2012 foi fundada a Escola de Música Choro Jazz, dando aulas
+                        gratuitas 03 vezes por semana com professores residentes na região e com mestres levados
+                        periodicamente para incentivar ainda mais os estudos.
+                    </p>
+                    <div class="container-botao fade-in-up">
+                        <a href="sambaiba.html" class="botao-conheca fade-in-up">
+                            <img src="public/images/seta.png" alt="Seta" class="seta-icon fade-in-up"> CONHEÇA
                         </a>
                     </div>
                 </div>
             </div>
-        </section> -->
-        
+        </section>
+
+        <section class="sobre_o_festival3 fade-in-up">
+            <div class="texto_overlay3 fade-in-up">
+                <div class="caixa_texto3 fade-in-up">
+                    <p class="fade-in-up">
+                        O FESTIVAL PRA MIM REPRESENTA UM SONHO DE TRANSFORMAR A VIDA DAS PESSOAS, DE LEVAR MÚSICA DE
+                        ALTO NÍVEL AONDE ELA TEM DIFÍCIL ACESSO E AO MESMO TEMPO AONDE PASSAM MILHARES DE PESSOAS DE
+                        VÁRIOS LUGARES E ETNIAS. É LEVAR EDUCAÇÃO E CRIAR UM AMBIENTE QUE SEJA FAVORÁVEL À COMUNIDADE.
+
+                        <div class="idealizador fade-in-up">
+                            <h3><br><br>CAPUCHO <br><span>IDEALIZADOR DO FESTIVAL</span></h3>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </section>
 
     </main>
 
+    <section class="patrocinio-container fade-in-up">
+        <section class="patrocinio-logos fade-in-up">
+            <a target="_blank" href="https://portaldoincentivo.com.br/visitors/how_encourage/1#:~:text=A%20Lei%20Rouanet%20permite%20ao,de%20R%24%20150.000%2C00">
+                <img src="assets/regua_de_logos/lei.png" alt="Lei de Incentivo a Cultura" class="regua_logo fade-in-up">
+            </a>
+            <div class="patrocinio-item fade-in-up">
+                <a href="https://www.instagram.com/antonio_ivan_capucho/" target="_blank">
+                    <img src="assets/regua_de_logos/capuchoPatrocinio.png" alt="Imagem Capucho Produções" class="regua_logo fade-in-up">
+                </a>
+            </div>
+            <div class="patrocinio-item fade-in-up">
+                <a href="https://www.iracemacultural.com.br/" target="_blank">
+                    <img src="assets/regua_de_logos/iracema.png" alt="Logo Iracema Cultural" class="regua_logo fade-in-up">
+                </a>
+            </div>
+            <div class="patrocinio-item fade-in-up">
+                <a href="https://www.instagram.com/festivalmarajoara/" target="_blank">
+                    <img src="assets/regua_de_logos/cariri.png" alt="Logo Centro Cultural Cariri" class="regua_logo fade-in-up">
+                </a>
+            </div>
+            <div class="patrocinio-item fade-in-up">
+                <div class="patrocinio-group fade-in-up">
+                    <a target="_blank" href="https://www.instagram.com/governopara/">
+                        <img src="assets/regua_de_logos/mirante.png" alt="Logo Instituto Mirante" class="regua_logo fade-in-up">
+                    </a>
+                    <a target="_blank" href="https://www.fcp.pa.gov.br/">
+                        <img src="assets/regua_de_logos/cultura.png" alt="Logo Secretaria de Cultura CE" class="regua_logo fade-in-up">
+                    </a>
+                    <a target="_blank" href="https://www.fcp.pa.gov.br/">
+                        <img src="assets/regua_de_logos/governo.png" alt="Logo Gov CE" class="regua_logo fade-in-up">
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        <!-- <p>&copy; 2024 Choro Jazz</p> -->
+        <section class="patrocinio-content fade-in-up">
+            <div class="fade-in-up">
+                <a href="https://www.instagram.com/petrobras/" target="_blank">
+                    <img src="assets/regua_de_logos/petrobras.png" alt="Logo da Petrobrás" class="regua_logo petrobras-logo fade-in-up">
+                </a>
+            </div>
+            <div class="fade-in-up">
+                <a href="https://www.gov.br/pt-br" target="_blank">
+                    <img src="assets/regua_de_logos/federal.png" alt="Logo do Governo Federal" class="regua_logo governo-federal-logo fade-in-up">
+                </a>
+            </div>
+        </section>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/regua_de_logos/logo footer 3.png" alt="Logo do Festival">
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Inscreva-se para <br> novidades em seu e-mail.</p>
+    
+                <form id="newsletterForm" action="https://formspree.io/f/mzzpbjrl" method="post">
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div id="successMessage2" style="display: none; color: green; margin-top: 10px;">
+                    Inscrição realizada com sucesso!
+                </div>
+            </div>
+        </div>
+    
+       
     </footer>
+    
+    <div class="footer-credits">
+        © 2024 Choro and Jazz. All rights reserved.
+    </div>
 
-    <script src="./js/main.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="./js/menu.js"></script>
     <script src="./js/audio.js"></script>
+    <script src="./js/cards.js"></script>
+    <script src="./js/formfooter.js"></script>
+    <script src="./js/efeito_imagens.js"></script>
 </body>
 
 </html>

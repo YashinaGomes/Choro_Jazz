@@ -19,6 +19,20 @@ header {
     height: 100vh;
     box-sizing: border-box;
 }
+/* Estilo inicial dos elementos que vão "cair" */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Classe que é adicionada quando o elemento está visível na viewport */
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 nav {
     display: flex;
@@ -44,7 +58,7 @@ nav .menu li a {
     color: #000000;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 800;
     line-height: 1.2;
     letter-spacing: 0.54px;
     text-decoration: none;
@@ -58,6 +72,7 @@ nav .menu li a {
 nav .menu li a:hover,
 nav .menu li:focus-within a {
     border-bottom: 3px solid #000000;
+    padding: 0.6rem;
 }
 
 .logo {
@@ -255,6 +270,40 @@ p {
     border-radius: 21px;
     padding: 2rem;
 }
+
+.inscreva-se {
+    border-radius: 12px;
+    background: #BE1E2D;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 4rem; /* Move para baixo */
+    margin-left: 5rem; /* Move para a direita */
+    transition: background 0.3s, box-shadow 0.3s; /* Transição suave */
+}
+
+.inscreva-se:hover {
+    background: #687F79; /* Cor de fundo mais escura no hover */
+    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); /* Aumenta a sombra no hover */
+}
+
+
+.link-button {
+    text-decoration: none;
+    display: block; /* Garante que o link ocupe todo o espaço do botão */
+    font-size: 16px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 102%; /* 44.88px */
+    letter-spacing: 2.2px;
+}
+
+
 
 .card-text-oficinas {
     display: flex;
@@ -497,6 +546,22 @@ p {
     background-color: #ddd;
 }
 
+.footer-credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #000;
+  
+}
+
 /* Menu Responsivo para Celular */
 @media (max-width: 768px) {
     header {
@@ -510,7 +575,7 @@ p {
     }
 
     .audio-player {
-        margin-top: 1rem;
+       display: none;
     }
 
     nav {
@@ -550,6 +615,7 @@ p {
     }
 
     h1 {
+        padding: 2rem;
         font-size: 4.5rem;
     }
 
@@ -567,7 +633,8 @@ p {
     .oficinas_card {
         background-image: url(../public/images/oficinas-celular.png);
         width: 378px;
-        height: 804px;
+        height: 894px;
+        
 
     }
 
@@ -578,8 +645,119 @@ p {
         justify-content: flex-start;
         width: 100%;
         height: 100%;
-        margin-top: 3rem;
+        
     }
+    .titulos {
+        margin-bottom: 6rem; /* Espaço abaixo do elemento */
+        /* ou */
+        margin-top: 6rem; /* Espaço acima do elemento */
+    }
+    
+
+    .inscreva-se {
+        border-radius: 12px;
+        background: #BE1E2D;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 1rem; /* Move para baixo */
+        margin-left: 1rem; /* Move para a direita */
+        transition: background 0.3s, box-shadow 0.3s; /* Transição suave */
+    }
+    
+    .inscreva-se:hover {
+        background: #687F79; /* Cor de fundo mais escura no hover */
+        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35); /* Aumenta a sombra no hover */
+    }
+    
+    
+    .link-button {
+        text-decoration: none;
+        display: block; /* Garante que o link ocupe todo o espaço do botão */
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 102%; /* 44.88px */
+        letter-spacing: 2.2px;
+    }
+    
+    .footer {
+        height: auto; /* Permite que o footer se ajuste ao conteúdo */
+        padding: 2rem 1rem; /* Reduz o padding para celulares */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Empilha o conteúdo para celulares */
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-logo img {
+        width: 300px; /* Reduz o tamanho da imagem em celulares */
+        height: auto;
+    }
+
+    .footer-newsletter h4 {
+        font-size: 36px; /* Ajusta o tamanho da fonte do título para celulares */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .footer-newsletter p {
+        font-size: 20px; /* Ajusta o tamanho da fonte do parágrafo para celulares */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 100%; /* Torna o campo de e-mail responsivo */
+        height: 50px; /* Reduz a altura do campo em celulares */
+    }
+
+    .footer-newsletter button {
+        width: 100%; /* Torna o botão responsivo */
+        text-align: center; /* Centraliza o texto no botão */
+        margin-left: 0;
+    }
+    
+    .footer {
+        height: auto; /* Permite que o footer se ajuste ao conteúdo */
+        padding: 2rem 1rem; /* Reduz o padding */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Empilha o conteúdo */
+        align-items: center;
+        gap: 2rem; /* Espaçamento entre itens */
+    }
+
+    .footer-logo img {
+        width: 350px; /* Ajusta o tamanho da imagem */
+        height: auto;
+    }
+
+    .footer-newsletter h4 {
+        font-size: 40px; /* Ajusta o tamanho da fonte do título */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .footer-newsletter p {
+        font-size: 20px; /* Ajusta o tamanho da fonte do parágrafo */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 100%; /* Torna o campo de e-mail responsivo */
+    }
+
+    .footer-newsletter button {
+        width: 100%; /* Torna o botão responsivo */
+        text-align: center; /* Centraliza o texto no botão */
+        margin-left: 0;
+    }
+    
 
 }
 
@@ -619,6 +797,10 @@ p {
         background-color: #000000;
         margin: 3px 0;
     }
+    .audio-player {
+        display: none;
+     }
+ 
 
     header {
         background-image: url(../public/images/capa_tablet.png);
@@ -685,8 +867,20 @@ p {
         margin-left: 2rem;
     }
 
+    .footer {
+        height: auto; /* Permite que o footer se ajuste ao conteúdo */
+        padding: 2rem 1rem; /* Reduz o padding */
+    }
 
+    .footer-content {
+        flex-direction: column; /* Empilha o conteúdo */
+        align-items: center;
+        gap: 2rem; /* Espaçamento entre itens */
+    }
 
-
+    .footer-logo img {
+        width: 400px; /* Ajusta o tamanho da imagem */
+        height: auto;
+    }
 
 }

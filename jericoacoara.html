@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/jericoacoara.css" />
+    <title>Choro Jazz 2024</title>
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <button class="menu-toggle" aria-label="Open menu">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+            <ul class="menu">
+                <li class="fade-in-up"><a class="link" href="index.html">Início</a></li>
+                <li class="fade-in-up"><a class="link" href="festival.html">O Festival</a></li>
+                <li class="fade-in-up"><a class="link" href="sambaiba.html">Centro Cultural Sambaíba</a></li>
+                <li class="fade-in-up"><img src="public/images/logo.png" alt="Logo" class="logo" /></li>
+                <li class="fade-in-up"><a class="link" href="para.html">Pará</a></li>
+                <li class="fade-in-up"><a class="link" href="cariri.html">Cariri</a></li>
+                <li class="fade-in-up"><a class="link" href="fortaleza.html">Fortaleza</a></li>
+                <li class="fade-in-up"><a class="link" href="jericoacoara.html">Jericoacoara</a></li>
+            </ul>
+            
+            <div class="audio-player">
+                <button id="play-pause-btn">&#10074;&#10074;</button> 
+                <audio id="audio-player">
+                    <source src="DÉO RIAN E REGIONAL IMPERIAL - 8ª EDIÇÃO FESTIVAL CHORO JAZZ.mp3" type="audio/mp3">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="development-section">
+            <div class="overlay-content">
+                <div class="spinner"></div>
+                <h2>Página em Desenvolvimento</h2>
+                <p>Estamos trabalhando para trazer o melhor para você. Volte em breve!</p>
+            </div>
+        </section>
+    </main>
+    
+    
+    <section class="patrocinio-container fade-in-up">
+        <section class="patrocinio-logos fade-in-up">
+            <a target="_blank" href="https://portaldoincentivo.com.br/visitors/how_encourage/1#:~:text=A%20Lei%20Rouanet%20permite%20ao,de%20R%24%20150.000%2C00">
+                <img src="assets/regua_de_logos/lei.png" alt="Lei de Incentivo a Cultura" class="regua_logo">
+            </a>
+            <div class="patrocinio-item fade-in-up">
+                <a href="https://www.instagram.com/antonio_ivan_capucho/" target="_blank">
+                    <img src="assets/regua_de_logos/capuchoPatrocinio.png" alt="Imagem Capucho Produções" class="regua_logo">
+                </a>
+            </div>
+            <div class="patrocinio-item fade-in-up">
+                <a href="https://www.iracemacultural.com.br/" target="_blank">
+                    <img src="assets/regua_de_logos/iracema.png" alt="Logo Iracema Cultural" class="regua_logo">
+                </a>
+            </div>
+            <div class="patrocinio-item fade-in-up">
+                <a href="https://www.instagram.com/festivalmarajoara/" target="_blank">
+                    <img src="assets/regua_de_logos/cariri.png" alt="Logo Centro Cultural Cariri" class="regua_logo">
+                </a>
+            </div>
+            <div class="patrocinio-item fade-in-up">
+                <div class="patrocinio-group">
+                    <a target="_blank" href="https://www.instagram.com/governopara/">
+                        <img src="assets/regua_de_logos/mirante.png" alt="Logo Instituto Mirante" class="regua_logo">
+                    </a>
+                    <a target="_blank" href="https://www.fcp.pa.gov.br/">
+                        <img src="assets/regua_de_logos/cultura.png" alt="Logo Secretaria de Cultura CE" class="regua_logo">
+                    </a>
+                    <a target="_blank" href="https://www.fcp.pa.gov.br/">
+                        <img src="assets/regua_de_logos/governo.png" alt="Logo Gov CE" class="regua_logo">
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <section class="patrocinio-content fade-in-up">
+            <div>
+                <a href="https://www.instagram.com/petrobras/" target="_blank">
+                    <img src="assets/regua_de_logos/petrobras.png" alt="Logo da Petrobrás" class="regua_logo petrobras-logo">
+                </a>
+            </div>
+            <div>
+                <a href="https://www.gov.br/pt-br" target="_blank">
+                    <img src="assets/regua_de_logos/federal.png" alt="Logo do Governo Federal" class="regua_logo governo-federal-logo">
+                </a>
+            </div>
+        </section>
+    </section>
+    
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/regua_de_logos/logo footer 3.png" alt="Logo do Festival">
+                
+            </div>
+            <div class="footer-newsletter">
+                <h4>Newsletter</h4>
+                <p>Inscreva-se para <br> novidades em seu e-mail.</p>
+                
+                <form id="newsletterForm" action="https://formspree.io/f/mzzpbjrl" method="post">
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div id="successMessage2" style="display: none; color: green; margin-top: 10px;">
+                    Inscrição realizada com sucesso!
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+    </footer>
+    <div class="footer-credits">
+        © 2024 Choro and Jazz. All rights reserved.
+    </div>
+    
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="./js/menu.js"></script>
+    <script src="./js/audio.js"></script>
+    <script src="./js/cards.js"></script>
+    <script src="./js/formfooter.js"></script>
+    <script src="./js/efeito_imagens.js"></script>
+</body>
+
+</html>

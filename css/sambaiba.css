@@ -1,0 +1,842 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(../public/images/capa_todos.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Estilo inicial dos elementos que vão "cair" */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Classe que é adicionada quando o elemento está visível na viewport */
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav .menu li {
+    flex-shrink: 0;
+}
+
+nav .menu li a {
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.54px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+    padding: 0.5rem;
+}
+
+nav .menu li a:hover,
+nav .menu li:focus-within a {
+    border-bottom: 3px solid #000000;
+    padding: 0.6rem;
+}
+
+.logo {
+    margin-top: 0.3rem;
+}
+
+.audio-player {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+#play-pause-btn {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.54px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1rem;
+    z-index: 12;
+}
+
+#play-pause-btn:focus {
+    outline: none;
+}
+
+#play-pause-btn.playing {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid transparent;
+}
+
+.logo {
+    width: 62px;
+    height: 30px;
+}
+
+/* Menu Hambúrguer */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #FFF;
+    margin: 3px 0;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+.sambaiba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+    background-image: url(../public/images/sambaiba_colorida.png);
+    background-size: 1163px;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 2rem;
+    /* Ajusta o espaçamento superior */
+    gap: 18rem;
+    /* Reduz o espaço entre o h1 e a caixa de texto */
+}
+
+.sambaiba h1 {
+    color: #FFF;
+    text-shadow: 11px 5px 2.7px rgba(0, 0, 0, 0.25);
+    font-family: Montserrat;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    /* Ajuste os valores conforme necessário */
+    font-style: normal;
+    font-weight: 900;
+    line-height: 96%;
+    /* 48px */
+    letter-spacing: -0.55px;
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+
+.caixa_texto_sambaiba {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1073px;
+    height: 317px;
+    background: rgba(255, 255, 255, 0.911);
+    box-sizing: border-box;
+    text-align: left;
+    overflow-y: auto;
+    padding: 2rem;
+
+}
+
+.texto_sambaiba {
+    color: #000;
+    font-family: Montserrat;
+    font-size: clamp(14px, 1.5vw, 18px);
+    /* Ajuste os valores conforme necessário */
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.2;
+    /* Ajuste conforme necessário */
+    letter-spacing: 0.3px;
+}
+
+.videos {
+    text-align: center;
+    padding: 2rem;
+    
+
+}
+
+.videos h2 {
+    color: #000;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 96%;
+    /* 57.6px */
+    letter-spacing: -0.66px;
+    font-size: clamp(3.5rem, 6vw, 4rem);
+    margin-bottom: 2rem;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: row;
+    /* Alinha os vídeos horizontalmente */
+    justify-content: center;
+    /* Centraliza os vídeos no container */
+    gap: 2rem;
+
+    /* Espaçamento entre os vídeos */
+    flex-wrap: wrap;
+    /* Permite que os vídeos se movam para a linha seguinte em telas menores */
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 330px;
+    /* Ajuste o tamanho máximo conforme necessário */
+    flex: 1 1 300px;
+    /* Permite que os itens se ajustem de forma flexível */
+
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 200px;
+    /* Ajuste a altura conforme necessário */
+    border: none;
+    border-radius: 9px;
+}
+
+.video-item p {
+    color: #000;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 96%;
+    /* 18.24px */
+    letter-spacing: -0.209px;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    margin-top: 1rem;
+}
+
+.galeria {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 4rem;
+}
+
+.galeria h2 {
+    color: #000;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 96%;
+    letter-spacing: -0.66px;
+    font-size: clamp(3.5rem, 6vw, 4rem);
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 6px solid #000000; /* Adiciona a borda ao redor do item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    border-color: #b1b1b1; /* Muda a cor da borda ao passar o mouse */
+}
+
+/* Geral para o container de patrocínio */
+.patrocinio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
+    /* Centraliza o conteúdo verticalmente */
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+/* Seção de logos de patrocínio */
+.patrocinio-logos {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a linha seguinte se necessário */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+    justify-content: center;
+    /* Centraliza os itens na horizontal */
+    align-items: center;
+    /* Alinha verticalmente os itens */
+}
+
+/* Itens individuais de patrocínio */
+.patrocinio-item {
+    display: flex;
+    justify-content: center;
+    /* Centraliza o conteúdo dentro do item */
+    align-items: center;
+}
+
+/* Agrupamento de logos */
+.patrocinio-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+}
+
+/* Estilo para as imagens de logo */
+.regua_logo {
+    width: 150px;
+    /* Ajuste o tamanho padrão conforme necessário */
+    height: 150px;
+    /* Define uma altura fixa para todas as imagens */
+    object-fit: contain;
+    /* Mantém a proporção da imagem sem distorcer */
+    margin: 0 auto;
+}
+
+/* Estilo específico para as logos da Petrobras e Governo Federal */
+.petrobras-logo,
+.governo-federal-logo {
+    width: 200px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 200px;
+    /* Define uma altura maior para essas imagens */
+}
+
+/* Seção de conteúdo de patrocínio */
+.patrocinio-content {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a linha seguinte se necessário */
+    padding-bottom: 1rem;
+    margin-top: 0;
+    /* Ajusta a margem superior para garantir que não sobreponha outros elementos */
+}
+
+.patrocinio-content>div {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente os itens */
+}
+
+
+/* Estilo geral do footer */
+.footer {
+    background-color: #000;
+    /* Cor de fundo preta */
+    color: #fff;
+    /* Texto branco */
+    width: 100%;
+    height: 50vh;
+    margin: 0 auto;
+    /* Centraliza o footer na página */
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente os itens */
+    padding: 0 2em;
+    /* Espaçamento interno lateral */
+}
+
+/* Container do conteúdo do footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* Espaça logo e newsletter */
+    width: 100%;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    width: 100%;
+    /* Garante que o container ocupe toda a largura disponível */
+    height: auto;
+    /* Ajusta a altura conforme necessário */
+    padding: 2rem 0;
+    /* Adiciona um pouco de espaçamento superior e inferior */
+}
+
+.footer-logo img {
+    width: 515px;
+    height: 248px;
+    object-fit: contain;
+    /* Garante que a imagem se ajuste dentro do espaço sem distorção */
+}
+
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    /* Coluna para o título e formulário */
+    justify-content: center;
+    /* Alinha verticalmente */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    margin-right: 5rem;
+    /* Adiciona um espaçamento à esquerda para mover o conteúdo mais para a esquerda */
+    gap: 15px;
+}
+
+/* Estilo do título da newsletter */
+.footer-newsletter h4 {
+    color: #FFF;
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    font-family: Montserrat;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 90px */
+    letter-spacing: -0.66px;
+}
+
+/* Estilo do parágrafo da newsletter */
+.footer-newsletter p {
+    color: #FFF;
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 98%;
+    /* 27.44px */
+    letter-spacing: -0.308px;
+}
+
+.footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Alinha o botão à direita */
+    gap: 10px;
+}
+
+.footer-newsletter input[type="email"] {
+    width: 536px;
+    height: 66px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+.footer-newsletter button {
+    width: 118px;
+    height: 34px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 101%;
+    letter-spacing: -0.22px;
+    background-color: #FFF;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    /* Alinha o botão à direita */
+}
+
+.footer-newsletter button:hover {
+    background-color: #ddd;
+}
+
+.footer-credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #000;
+  
+}
+
+/* Menu Responsivo para Celular */
+@media (max-width: 768px) {
+    header {
+        background-image: url(../public/images/todos_celular.png);
+        background-size: cover;
+    }
+
+    nav .menu.active {
+        display: flex;
+        padding: 4rem 0;
+    }
+
+    .audio-player {
+        display: none;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        align-items: center;
+        overflow: hidden;
+    }
+
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-icon {
+        width: 30px;
+        height: 3px;
+        background-color: #000000;
+        margin: 3px 0;
+    }
+
+    .sambaiba {
+        gap: 3rem;
+        /* Reduz o espaço entre o h1 e a caixa de texto */
+    }
+
+    .sambaiba h1 {
+        padding: rem;
+    }
+
+    .caixa_texto_sambaiba {
+        width: 353px;
+        height: 517px;
+        padding: 1rem;
+
+    }
+
+
+    .inscreva-se {
+        border-radius: 12px;
+        background: #BE1E2D;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 1rem;
+        /* Move para baixo */
+        margin-left: 1rem;
+        /* Move para a direita */
+        transition: background 0.3s, box-shadow 0.3s;
+        /* Transição suave */
+    }
+
+    .inscreva-se:hover {
+        background: #687F79;
+        /* Cor de fundo mais escura no hover */
+        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
+        /* Aumenta a sombra no hover */
+    }
+
+
+    .link-button {
+        text-decoration: none;
+        display: block;
+        /* Garante que o link ocupe todo o espaço do botão */
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 102%;
+        /* 44.88px */
+        letter-spacing: 2.2px;
+    }
+
+    .footer {
+        height: auto;
+        /* Permite que o footer se ajuste ao conteúdo */
+        padding: 2rem 1rem;
+        /* Reduz o padding para celulares */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        /* Empilha o conteúdo para celulares */
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-logo img {
+        width: 300px;
+        /* Reduz o tamanho da imagem em celulares */
+        height: auto;
+    }
+
+    .footer-newsletter h4 {
+        font-size: 36px;
+        /* Ajusta o tamanho da fonte do título para celulares */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .footer-newsletter p {
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte do parágrafo para celulares */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 100%;
+        /* Torna o campo de e-mail responsivo */
+        height: 50px;
+        /* Reduz a altura do campo em celulares */
+    }
+
+    .footer-newsletter button {
+        width: 100%;
+        /* Torna o botão responsivo */
+        text-align: center;
+        /* Centraliza o texto no botão */
+        margin-left: 0;
+    }
+
+    .footer {
+        height: auto;
+        /* Permite que o footer se ajuste ao conteúdo */
+        padding: 2rem 1rem;
+        /* Reduz o padding */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        /* Empilha o conteúdo */
+        align-items: center;
+        gap: 2rem;
+        /* Espaçamento entre itens */
+    }
+
+    .footer-logo img {
+        width: 350px;
+        /* Ajusta o tamanho da imagem */
+        height: auto;
+    }
+
+    .footer-newsletter h4 {
+        font-size: 40px;
+        /* Ajusta o tamanho da fonte do título */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .footer-newsletter p {
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte do parágrafo */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 100%;
+        /* Torna o campo de e-mail responsivo */
+    }
+
+    .footer-newsletter button {
+        width: 100%;
+        /* Torna o botão responsivo */
+        text-align: center;
+        /* Centraliza o texto no botão */
+        margin-left: 0;
+    }
+
+
+}
+
+/* Menu Responsivo para Tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+    nav .menu.active {
+        display: flex;
+        padding: 4rem 0;
+    }
+
+    .audio-player {
+        margin-top: 1rem;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-icon {
+        width: 30px;
+        height: 3px;
+        background-color: #000000;
+        margin: 3px 0;
+    }
+
+    .audio-player {
+        display: none;
+    }
+
+
+    header {
+        background-image: url(../public/images/todos_tablet.png);
+        background-size: cover;
+
+    }
+
+    .caixa_texto_sambaiba {
+        width: 853px;
+        height: 287px;
+    }
+
+
+
+    .video-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .video-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 640px;
+        /* Ajuste o tamanho máximo conforme necessário */
+    }
+
+    .video-item iframe {
+        width: 100%;
+        height: 360px;
+        /* Ajuste a altura conforme necessário */
+        border: none;
+    }
+
+    .video-item p {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        margin-top: 1rem;
+    }
+
+
+    .footer {
+        height: auto;
+        /* Permite que o footer se ajuste ao conteúdo */
+        padding: 2rem 1rem;
+        /* Reduz o padding */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        /* Empilha o conteúdo */
+        align-items: center;
+        gap: 2rem;
+        /* Espaçamento entre itens */
+    }
+
+    .footer-logo img {
+        width: 400px;
+        /* Ajusta o tamanho da imagem */
+        height: auto;
+    }
+
+}

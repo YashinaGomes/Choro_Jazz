@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -9,25 +8,45 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-
+    background-image: url(../public/images/capa_todos.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
+/* Estilo inicial dos elementos que vão "cair" */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Classe que é adicionada quando o elemento está visível na viewport */
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 nav {
-    top: 0;
     display: flex;
     justify-content: center;
-    background-color: #000000;
-    padding: 50px;
     width: 100%;
+    padding: 20px 40px;
     box-sizing: border-box;
 }
 
 nav .menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     padding: 0;
     margin: 0;
 }
@@ -37,23 +56,28 @@ nav .menu li {
 }
 
 nav .menu li a {
-    color: #FFF;
+    color: #000000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 800;
     line-height: 1.2;
     letter-spacing: 0.54px;
     text-decoration: none;
-    padding: 5px;
     display: flex;
     align-items: center;
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.3s ease;
+    padding: 0.5rem;
 }
 
 nav .menu li a:hover,
 nav .menu li:focus-within a {
-    border-bottom: 2px solid #FFF;
+    border-bottom: 3px solid #000000;
+    padding: 0.6rem;
+}
+
+.logo {
+    margin-top: 0.3rem;
 }
 
 .audio-player {
@@ -65,9 +89,9 @@ nav .menu li:focus-within a {
 }
 
 #play-pause-btn {
-    background-color: #000;
-    color: #fff;
-    border: 2px solid #000;
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid transparent;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -85,18 +109,15 @@ nav .menu li:focus-within a {
 }
 
 #play-pause-btn.playing {
-    background-color: #000000;
-    color: #ffffff;
-    border: 2px solid #000;
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid transparent;
 }
 
 .logo {
     width: 62px;
     height: 30px;
 }
-
-
-
 
 /* Menu Hambúrguer */
 .menu-toggle {
@@ -121,85 +142,7 @@ nav .menu li:focus-within a {
     outline: none;
 }
 
-.container-home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 667px;
-    background: #000000;
-    box-sizing: border-box;
-}
-
-.logo-mobile {
-    display: none;
-}
-
-.logo_capa {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: (591px / parentWidth) * 100%;
-    height: (189px / parentHeight) * 100%;
-}
-
-
-.instruments-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.music_piano {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.sax_bass {
-    justify-content: flex-end;
-
-}
-
-.cultura {
-    color: #FFF;
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(15px, 3vw, 20px);
-    text-align: center;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 94%;
-    letter-spacing: 0.6px;
-}
-
-/* 
-.music {
-    width: 290px;
-    height: 157px;
-    margin-left: 1rem;
-}
-
-.piano {
-    width: 245px;
-    height: 220px;
-
-}
-
-.bass {
-    width: 128px;
-    height: 367px;
-}
-
-.saxophone {
-    width: 128px;
-    height: 178px;
-
-} */
-
- .sobre_o_festival {
+.sobre_o_festival {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -210,25 +153,12 @@ nav .menu li:focus-within a {
     background-position: center;
     background-repeat: no-repeat;
 
-} 
+}
 
-/* .o_festival {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   padding: 3rem; 
-} */
-
-/* .foto_festival {
-    width: 1163px;
-    height: 741px;
-    
-} */
 
 .texto_overlay {
-    width: 65%;
-    height: 64%;
+    width: 61%;
+    height: 58%;
 }
 
 .caixa_texto {
@@ -239,7 +169,6 @@ nav .menu li:focus-within a {
     width: 473px;
     height: 667px;
     background: rgba(255, 255, 255, 0.911);
-    padding: 20px;
     box-sizing: border-box;
     text-align: left;
     overflow-y: auto;
@@ -249,24 +178,39 @@ nav .menu li:focus-within a {
 .titulo_festival {
     color: #000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 70px;
+    font-size: clamp(3rem, 6vw, 65px);
     font-weight: 900;
     line-height: 150%;
     letter-spacing: -0.66px;
     text-transform: capitalize;
     margin: 0 0 1rem;
+    text-align: left;
+    /* Justifica o texto para a esquerda */
 }
+
 
 p {
     color: #000;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: 400;
-    line-height: 139%;
+    line-height: 119%;
     letter-spacing: 0.72px;
     margin: 0;
+    
 }
 
+
+/* Estilo do contêiner que envolve o botão */
+.container-botao {
+    display: flex;
+    justify-content: flex-start;
+    /* Alinha o botão à esquerda do contêiner */
+    padding-right: 15rem;
+    /* Opcional: ajuste o espaço do contêiner em relação à borda esquerda, se necessário */
+}
+
+/* Estilo do botão */
 .botao-conheca {
     display: inline-flex;
     align-items: center;
@@ -280,6 +224,7 @@ p {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* Estilo do ícone dentro do botão */
 .seta-icon {
     width: 20px;
     height: auto;
@@ -287,105 +232,596 @@ p {
     transition: transform 0.3s ease;
 }
 
+/* Estilo do botão ao passar o mouse */
 .botao-conheca:hover {
     color: #000000;
     transform: scale(1.1);
 }
 
 
-
-/* .sambaiba {
-    width: 100%;
+.sobre_o_festival2 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    height: 150vh;
+    gap: 3rem;
+    background-image: url(../public/images/foto_sambaiba.png);
+    background-size: 1163px;
+    background-position: center;
+    background-repeat: no-repeat;
 
-.foto_sambaiba {
-    width: 1163px;
-    height: 741px;
-    object-fit: cover;
 }
 
 .texto_overlay2 {
-    top: 50%;
-    left: 64%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    width: 1%;
+    height: 63%;
 }
 
+.caixa_texto2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 473px;
+    height: 737px;
+    background: rgba(255, 255, 255, 0.911);
+    box-sizing: border-box;
+    text-align: left;
+    overflow-y: auto;
+    padding: 3rem;
+}
 
 .titulo_sambaiba {
     color: #000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 60px;
+    font-size: clamp(3rem, 4vw, 55px);
     font-weight: 900;
     line-height: 150%;
     letter-spacing: -0.66px;
+    word-spacing: 6rem;
+    /* Diminui o espaço entre as palavras */
     text-transform: capitalize;
-    margin: 0 0 2rem;
-    line-height: 89%;
+    margin: 0 0 1rem;
+}
+
+.sobre_o_festival3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    gap: 3rem;
+    background-image: url(../public/images/foto_capucho.png);
+    background-size: 1163px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.caixa_texto3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 873px;
+    height: 317px;
+    background: rgba(255, 255, 255, 0.911);
+    box-sizing: border-box;
+    text-align: left;
+    overflow-y: auto;
+    padding: 2rem;
+    margin-top: 7rem;
+}
+
+.texto_overlay3 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 146%;
+    /* 26.28px */
+    letter-spacing: 1.62px;
+    width: 50%;
+    height: 1%;
+}
+
+.idealizador {
+    text-align: left; /* Alinha o conteúdo da div à esquerda */
+    margin-right: auto; /* Garante que a div esteja à esquerda */
+    float: left; /* Faz com que a div flutue à esquerda, se necessário */
+}
+
+
+h3 {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 146%;
+    /* 26.28px */
+    letter-spacing: 1.62px;
+}
+
+span {
+    color: #000;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 146%;
+    /* 26.28px */
+    letter-spacing: 1.62px;
+}
+
+
+/* Geral para o container de patrocínio */
+.patrocinio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centraliza o conteúdo horizontalmente */
+    justify-content: center;
+    /* Centraliza o conteúdo verticalmente */
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+/* Seção de logos de patrocínio */
+.patrocinio-logos {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a linha seguinte se necessário */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+    justify-content: center;
+    /* Centraliza os itens na horizontal */
+    align-items: center;
+    /* Alinha verticalmente os itens */
+}
+
+/* Itens individuais de patrocínio */
+.patrocinio-item {
+    display: flex;
+    justify-content: center;
+    /* Centraliza o conteúdo dentro do item */
+    align-items: center;
+}
+
+/* Agrupamento de logos */
+.patrocinio-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    align-items: center;
+    /* Centraliza os itens verticalmente */
+}
+
+/* Estilo para as imagens de logo */
+.regua_logo {
+    width: 150px;
+    /* Ajuste o tamanho padrão conforme necessário */
+    height: 150px;
+    /* Define uma altura fixa para todas as imagens */
+    object-fit: contain;
+    /* Mantém a proporção da imagem sem distorcer */
+    margin: 0 auto;
+}
+
+/* Estilo específico para as logos da Petrobras e Governo Federal */
+.petrobras-logo,
+.governo-federal-logo {
+    width: 200px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 200px;
+    /* Define uma altura maior para essas imagens */
+}
+
+/* Seção de conteúdo de patrocínio */
+.patrocinio-content {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a linha seguinte se necessário */
+    padding-bottom: 1rem;
+    margin-top: 0;
+    /* Ajusta a margem superior para garantir que não sobreponha outros elementos */
+}
+
+.patrocinio-content>div {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente os itens */
+}
+
+
+/* Estilo geral do footer */
+.footer {
+    background-color: #000;
+    /* Cor de fundo preta */
+    color: #fff;
+    /* Texto branco */
+    width: 100%;
+    height: 70vh;
+    margin: 0 auto;
+    /* Centraliza o footer na página */
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente os itens */
+    padding: 0 2em;
+    /* Espaçamento interno lateral */
+}
+
+/* Container do conteúdo do footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* Espaça logo e newsletter */
+    width: 100%;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    width: 100%;
+    /* Garante que o container ocupe toda a largura disponível */
+    height: auto;
+    /* Ajusta a altura conforme necessário */
+    padding: 2rem 0;
+    /* Adiciona um pouco de espaçamento superior e inferior */
+}
+
+.footer-logo img {
+    width: 515px;
+    height: 248px;
+    object-fit: contain;
+    /* Garante que a imagem se ajuste dentro do espaço sem distorção */
+}
+
+
+.footer-newsletter {
+    display: flex;
+    flex-direction: column;
+    /* Coluna para o título e formulário */
+    justify-content: center;
+    /* Alinha verticalmente */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    margin-right: 5rem;
+    /* Adiciona um espaçamento à esquerda para mover o conteúdo mais para a esquerda */
+    gap: 15px;
+}
+
+/* Estilo do título da newsletter */
+.footer-newsletter h4 {
+    color: #FFF;
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    font-family: Montserrat;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    /* 90px */
     letter-spacing: -0.66px;
-} */
-
-/* Animações */
-/* @keyframes fall {
-    0% {
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
-@keyframes jump {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-20px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+/* Estilo do parágrafo da newsletter */
+.footer-newsletter p {
+    color: #FFF;
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 98%;
+    /* 27.44px */
+    letter-spacing: -0.308px;
 }
 
-.image-fall {
-    animation: fall 2s ease-out forwards;
+.footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* Alinha o botão à direita */
+    gap: 10px;
 }
 
-.image-jump {
-    animation: jump 2s ease-in-out infinite;
+.footer-newsletter input[type="email"] {
+    width: 536px;
+    height: 66px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0 10px;
 }
 
-.no-jump {
-    animation: fall 2s ease-out forwards;
-} */
+.footer-newsletter button {
+    width: 118px;
+    height: 34px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 101%;
+    letter-spacing: -0.22px;
+    background-color: #FFF;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    /* Alinha o botão à direita */
+}
 
-/* Menu Responsivo para Tablets */
-@media (max-width: 1024px) and (min-width: 769px) {
+.footer-newsletter button:hover {
+    background-color: #ddd;
+}
+
+.footer-credits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-color: #000;
+  
+}
+
+/* Menu Responsivo para Celular */
+@media (max-width: 768px) {
+    header {
+        background-image: url(../public/images/todos_celular.png);
+        background-size: cover;
+    }
+
+    nav .menu.active {
+        display: flex;
+        padding: 4rem 0;
+    }
+
+    .audio-player {
+        display: none;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 20px;
+    }
+
     nav .menu {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #000000;
-        top: 60px;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        justify-content: center;
+        background-color: #ffffff;
         align-items: center;
         overflow: hidden;
     }
+
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-icon {
+        width: 30px;
+        height: 3px;
+        background-color: #000000;
+        margin: 3px 0;
+    }
+
+    .texto_overlay {
+        width: 90%;
+        height: auto;
+    }
+
+    .caixa_texto {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+        text-align: center;
+        /* Centraliza o texto em telas menores */
+
+    }
+
+    .caixa_texto2 {
+        width: 100%;
+        height: auto;
+        padding: 2rem;
+        text-align: center;
+        /* Centraliza o texto em telas menores */
+
+    }
+
+    .texto_overlay2 {
+        width: 90%;
+        height: auto;
+    }
+
+    .container-botao {
+        display: flex;
+        justify-content: flex-start;
+        /* Alinha o botão à esquerda do contêiner */
+        padding-right: 1rem;
+        /* Opcional: ajuste o espaço do contêiner em relação à borda esquerda, se necessário */
+    }
+
+    .caixa_texto3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 343px;
+        height: 637px;
+        background: rgba(255, 255, 255, 0.911);
+        box-sizing: border-box;
+        text-align: left;
+        overflow-y: auto;
+        padding: 3rem;
+    }
+
+    .texto_overlay3 {
+        width: 90%;
+        height: 50%;
+    }
+
+
+
+    .inscreva-se {
+        border-radius: 12px;
+        background: #BE1E2D;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 1rem;
+        /* Move para baixo */
+        margin-left: 1rem;
+        /* Move para a direita */
+        transition: background 0.3s, box-shadow 0.3s;
+        /* Transição suave */
+    }
+
+    .inscreva-se:hover {
+        background: #687F79;
+        /* Cor de fundo mais escura no hover */
+        box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.35);
+        /* Aumenta a sombra no hover */
+    }
+
+
+    .link-button {
+        text-decoration: none;
+        display: block;
+        /* Garante que o link ocupe todo o espaço do botão */
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 102%;
+        /* 44.88px */
+        letter-spacing: 2.2px;
+    }
+
+    .footer {
+        height: auto;
+        /* Permite que o footer se ajuste ao conteúdo */
+        padding: 2rem 1rem;
+        /* Reduz o padding para celulares */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        /* Empilha o conteúdo para celulares */
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .footer-logo img {
+        width: 300px;
+        /* Reduz o tamanho da imagem em celulares */
+        height: auto;
+    }
+
+    .footer-newsletter h4 {
+        font-size: 36px;
+        /* Ajusta o tamanho da fonte do título para celulares */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .footer-newsletter p {
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte do parágrafo para celulares */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 100%;
+        /* Torna o campo de e-mail responsivo */
+        height: 50px;
+        /* Reduz a altura do campo em celulares */
+    }
+
+    .footer-newsletter button {
+        width: 100%;
+        /* Torna o botão responsivo */
+        text-align: center;
+        /* Centraliza o texto no botão */
+        margin-left: 0;
+    }
+
+    .footer {
+        height: auto;
+        /* Permite que o footer se ajuste ao conteúdo */
+        padding: 2rem 1rem;
+        /* Reduz o padding */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        /* Empilha o conteúdo */
+        align-items: center;
+        gap: 2rem;
+        /* Espaçamento entre itens */
+    }
+
+    .footer-logo img {
+        width: 350px;
+        /* Ajusta o tamanho da imagem */
+        height: auto;
+    }
+
+    .footer-newsletter h4 {
+        font-size: 40px;
+        /* Ajusta o tamanho da fonte do título */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .footer-newsletter p {
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte do parágrafo */
+        text-align: center;
+        /* Centraliza o texto */
+    }
+
+    .footer-newsletter input[type="email"] {
+        width: 100%;
+        /* Torna o campo de e-mail responsivo */
+    }
+
+    .footer-newsletter button {
+        width: 100%;
+        /* Torna o botão responsivo */
+        text-align: center;
+        /* Centraliza o texto no botão */
+        margin-left: 0;
+    }
+
+
+}
+
+/* Menu Responsivo para Tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
 
     nav .menu.active {
         display: flex;
@@ -396,149 +832,122 @@ p {
         margin-top: 1rem;
     }
 
-    .menu-toggle {
-        display: flex;
+    nav {
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 1100;
+        padding: 20px;
     }
 
-    .menu-icon {
-        width: 30px;
-        height: 3px;
-        background-color: #FFF;
-        margin: 3px 0;
-    }
-
-    .menu-toggle:focus {
-        outline: none;
-    }
-
-    /* .logo-mobile {
-        display: flex;
-    } */
-
-    /* .cultura {
-        font-size: 19px;
-    } */
-
-    /* .logo_capa {
-        width: 70%;
-        height: 150px;
-        margin-bottom: -5rem;
-    } */
-
-    /* .music {
-        display: none;
-    }
-
-    .piano {
-        margin-top: 6rem;
-    }
-
-    .bass {
-        display: none;
-    }
-
-    .saxophone {
-        margin-bottom: -5rem;
-        margin-right: 9rem;
-    } */
-
-    /* .texto_overlay {
-        left: 50%;
-    }
-
-
-    .texto_overlay2 {
-        left: 50%;
-    } */
-}
-
-/* Menu Responsivo para Dispositivos Móveis */
-@media (max-width: 768px) {
     nav .menu {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: #000000;
-        top: 60px;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        justify-content: center;
+        background-color: #ffffff;
         align-items: center;
-        overflow: auto;
-    }
-
-    nav .menu.active {
-        display: flex;
-        padding: 4rem 0;
-    }
-
-    .audio-player {
-        margin-top: 2rem;
+        overflow: hidden;
     }
 
     .menu-toggle {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding-top: 20px;
-        z-index: 1100;
     }
 
     .menu-icon {
         width: 30px;
         height: 3px;
-        background-color: #FFF;
+        background-color: #000000;
         margin: 3px 0;
     }
 
-    .menu-toggle:focus {
-        outline: none;
-    }
-
-    /* .cultura {
-        font-size: 20px;
-        font-weight: 700;
-    } */
-
-    /* .logo_capa {
-        width: 100%;
-        margin-bottom: 5rem;
-    } */
-/* 
-    .music {
+    .audio-player {
         display: none;
     }
 
-    .piano {
-        margin-bottom: 8rem;
-        margin-left: 2rem;
+    header {
+        background-image: url(../public/images/todos_tablet.png);
+        background-size: cover;
+
     }
 
-    .bass {
-        display: none;
+    .texto_overlay {
+        width: 50%;
+        height: auto;
     }
 
-    .saxophone {
-        display: none;
-    } */
+    .caixa_texto {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+        text-align: left;
+        /* Alinha o texto à esquerda */
+    }
 
-    /* .texto_overlay {
-        left: 50%;
+
+    .caixa_texto2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 443px;
+        height: 697px;
+        background: rgba(255, 255, 255, 0.911);
+        box-sizing: border-box;
+        text-align: left;
+        overflow-y: auto;
+        padding: 3rem;
     }
 
     .texto_overlay2 {
-        left: 50%;
-    } */
+        width: 50%;
+        height: 35%;
+    }
+
+    .caixa_texto3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 643px;
+        height: 437px;
+        background: rgba(255, 255, 255, 0.911);
+        box-sizing: border-box;
+        text-align: left;
+        overflow-y: auto;
+        padding: 3rem;
+    }
+
+    .texto_overlay3 {
+        width: 70%;
+        height: 10%;
+    }
+
+    .container-botao {
+        display: flex;
+        justify-content: flex-start;
+        /* Alinha o botão à esquerda do contêiner */
+        padding-right: 14rem;
+        /* Opcional: ajuste o espaço do contêiner em relação à borda esquerda, se necessário */
+    }
+
+
+
+    .footer {
+        height: auto;
+        /* Permite que o footer se ajuste ao conteúdo */
+        padding: 2rem 1rem;
+        /* Reduz o padding */
+    }
+
+    .footer-content {
+        flex-direction: column;
+        /* Empilha o conteúdo */
+        align-items: center;
+        gap: 2rem;
+        /* Espaçamento entre itens */
+    }
+
+    .footer-logo img {
+        width: 400px;
+        /* Ajusta o tamanho da imagem */
+        height: auto;
+    }
+
 }

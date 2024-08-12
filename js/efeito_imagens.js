@@ -1,10 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
+document.addEventListener('DOMContentLoaded', function() {
+    const elements = document.querySelectorAll('.fade-in-up');
 
-    menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
+    function checkVisibility() {
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                el.classList.add('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility(); // Verificar visibilidade inicial
+});
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const menuToggle = document.querySelector('.menu-toggle');
+//     const menu = document.querySelector('.menu');
+
+//     menuToggle.addEventListener('click', () => {
+//         menu.classList.toggle('active');
+//     });
 
 
     // const images = document.querySelectorAll('.section-home img:not(.logo_capa):not(.cultura)');
@@ -38,4 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //     const randomFallDuration = Math.floor(Math.random() * 4) + 2;
     //     element.style.animationDuration = `${randomFallDuration}s`;
     // });
-});
+// });
+
+
