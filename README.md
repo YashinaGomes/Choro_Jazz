@@ -1,5 +1,8 @@
 # Festival Choro Jazz 2024
 
+![Festival Choro Jazz](https://github.com/user-attachments/assets/81310383-5b2c-41de-9661-a372ad483b4b)
+![Evento](https://github.com/user-attachments/assets/57a58ea9-834a-437e-bf4f-a7d2404cef92)
+
 O Festival Choro Jazz, um dos principais eventos do calendário musical brasileiro, comemora 15 anos em 2024 com uma edição itinerante. Em parceria com o Festival Marajoara de Cultura Amazônica (FEMCA), o evento se expandiu para incluir edições em dois estados e cinco cidades.
 
 ## Sobre o Festival
@@ -25,12 +28,24 @@ Para mais informações, visite nossos perfis:
 
 O site do Festival Choro Jazz 2024 foi desenvolvido com as seguintes tecnologias:
 
-- **HTML5:** Estruturação do conteúdo e definição das páginas.
-- **CSS3:** Estilização do layout, com uso de pré-processadores para otimizar o código. Utilizou-se `display: flex` e `grid` para layout responsivo e o efeito `fade-in-up` para animações.
-- **JavaScript:** Adição de funcionalidades interativas, incluindo a geração dinâmica de cards e animações de rolagem.
-- **ScrollReveal:** Biblioteca para animações de rolagem, proporcionando uma experiência visual envolvente.
-- **Infynit Cloud Compute:** Hospedagem do site.
-- **Libras:** Implementação de acessibilidade com suporte a Língua Brasileira de Sinais (Libras).
+- **HTML5:**
+  ![HTML5](https://example.com/path-to-html5-image) 
+  Estruturação do conteúdo e definição das páginas.
+- **CSS3:**
+  ![CSS3](https://example.com/path-to-css3-image) 
+  Estilização do layout, com uso de pré-processadores para otimizar o código. Utilizou-se `display: flex` e `grid` para layout responsivo e o efeito `fade-in-up` para animações.
+- **JavaScript:**
+  ![JavaScript](https://example.com/path-to-javascript-image) 
+  Adição de funcionalidades interativas, incluindo a geração dinâmica de cards e animações de rolagem.
+- **ScrollReveal:**
+  ![ScrollReveal](https://example.com/path-to-scrollreveal-image) 
+  Biblioteca para animações de rolagem, proporcionando uma experiência visual envolvente.
+- **Infynit Cloud Compute:**
+  ![Infynit Cloud Compute](https://example.com/path-to-infynit-cloud-compute-image) 
+  Hospedagem do site.
+- **Libras:**
+  ![Libras](https://example.com/path-to-libras-image) 
+  Implementação de acessibilidade com suporte a Língua Brasileira de Sinais (Libras).
 
 ## Estrutura do Projeto
 
@@ -47,12 +62,10 @@ O projeto é estruturado da seguinte forma:
 
 O site foi desenvolvido com foco em acessibilidade, incluindo suporte para Língua Brasileira de Sinais (Libras) para garantir que o conteúdo seja acessível a todos os usuários.
 
-
 ## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
 
-Para mais informações, fique atento às atualizações e siga nossos perfis nas redes sociais!
-
+Para mais informações, visite o site oficial: [https://chorojazz.com/index.html](https://chorojazz.com/index.html) e fique atento às atualizações. Siga nossos perfis nas redes sociais para novidades!
