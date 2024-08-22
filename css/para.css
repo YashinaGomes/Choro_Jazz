@@ -333,19 +333,23 @@ nav .menu li:focus-within a {
     align-items: center; /* Centraliza os itens verticalmente */
 }
 
-/* Estilo para as imagens de logo */
 .regua_logo {
-    width: 150px; /* Ajuste o tamanho padrão conforme necessário */
-    height: 150px; /* Define uma altura fixa para todas as imagens */
-    object-fit: contain; /* Mantém a proporção da imagem sem distorcer */
+    width: 170px;
+    /* Ajuste o tamanho padrão conforme necessário */
+    height: 170px;
+    /* Define uma altura fixa para todas as imagens */
+    object-fit: contain;
+    /* Mantém a proporção da imagem sem distorcer */
     margin: 0 auto;
 }
 
 /* Estilo específico para as logos da Petrobras e Governo Federal */
 .petrobras-logo,
 .governo-federal-logo {
-    width: 200px; /* Ajuste o tamanho conforme necessário */
-    height: 200px; /* Define uma altura maior para essas imagens */
+    width: 300px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 300px;
+    /* Define uma altura maior para essas imagens */
 }
 
 /* Seção de conteúdo de patrocínio */

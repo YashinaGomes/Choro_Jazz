@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     let cardsData = [{
         imgSrc1: './assets/cards/triomanari.png', // Renomeado para evitar espaços
-        imgSrc2: './assets/cards/release.png',
+        imgSrc2: './assets/cards/release_branco.png',
         link1: '#', // Renomeado para evitar espaços
         link2: './assets/pdf/Trio_Manari.pdf',
       },
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
         imgSrc1: './assets/cards/orquestra.png',
-        imgSrc2: './assets/cards/relese_branco.png',
+        imgSrc2: './assets/cards/release_branco.png',
         link1: '#',
         link2: './assets/pdf/orquestraaerofonica.pdf',
       },

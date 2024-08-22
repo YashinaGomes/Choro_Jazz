@@ -274,11 +274,10 @@ p {
     /* Centraliza os itens verticalmente */
 }
 
-/* Estilo para as imagens de logo */
 .regua_logo {
-    width: 150px;
+    width: 170px;
     /* Ajuste o tamanho padrão conforme necessário */
-    height: 150px;
+    height: 170px;
     /* Define uma altura fixa para todas as imagens */
     object-fit: contain;
     /* Mantém a proporção da imagem sem distorcer */
@@ -288,9 +287,9 @@ p {
 /* Estilo específico para as logos da Petrobras e Governo Federal */
 .petrobras-logo,
 .governo-federal-logo {
-    width: 200px;
+    width: 300px;
     /* Ajuste o tamanho conforme necessário */
-    height: 200px;
+    height: 300px;
     /* Define uma altura maior para essas imagens */
 }
 

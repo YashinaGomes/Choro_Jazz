@@ -1,62 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cardContainer = document.getElementById('card-container');
 
-  let cardsData = [
-    {
+  let cardsData = [{
       imgSrc1: './assets/cards/baile_do_ney.png',
       imgSrc2: './assets/cards/release.png',
       link1: '#',
       link2: './assets/pdf/baile_do_ney.jpeg',
       title: 'Baile do Ney',
-      text: 'Ney Conceição começou sua carreira musical tocando em banda baile e desde muito jovem...'
+      text: 'Ney Conceição começou sua carreira musical tocando em banda baile e desde muito jovem teve que aprender a fazer o seu baixo pulsar a banda. Com vasta experiência...'
     },
     {
       imgSrc1: './assets/cards/Patriolino.png',
       imgSrc2: './assets/cards/release.png',
       link1: '#',
       link2: './assets/pdf/Patriolino.pdf',
-      title: 'Patriolino',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor...'
+      title: 'Carlinhos Patriolino e Choro Cabuloso',
+      text: 'Carlinhos Patriolino é um multiinstrumentista autodidata, compositor e arranjador com uma arreira de repercussão nacional e...'
     },
     {
       imgSrc1: './assets/cards/Quartcheto.png',
       imgSrc2: './assets/cards/release.png',
       link1: '#',
       link2: './assets/pdf/Quartcheto.pdf',
-      title: 'Quartcheto',
-      text: 'O Quartchêto é um grupo instrumental formado por artistas dedicados ao fomento da música... '
+      title: 'Quartchêto',
+      text: 'O Quartchêto é um grupo instrumental formado por artistas dedicados ao fomento da música brasileira feita no Sul do Brasil. Nossa missão é compartilhar... '
     },
     {
       imgSrc1: './assets/cards/Duo_Celestial.png',
       imgSrc2: './assets/cards/release.png',
       link1: '#',
-      link2: './assets/pdf/Duo_Celestial.pdf',
+      link2: './assets/pdf/Duo_Selestrial.pdf',
       title: 'Duo Selestrial',
-      text: 'Junior Crato e Fabricio da Rocha se encontraram no Crato no começo de 2013...'
+      text: 'Junior Crato e Fabricio da Rocha se encontraram no Crato no começo de 2013. Desse encontro inusitado surgiu a ideia de montar um espetáculo instrumental...'
     },
     {
       imgSrc1: './assets/cards/Egberto_Gismont.png',
       imgSrc2: './assets/cards/release.png',
       link1: '#',
       link2: './assets/pdf/Egberto_Gismont.pdf',
-      title: 'Egberto Gismont',
-      text: 'Músico de renome internacional, Egberto Gismonti nasceu em Carmo, município do Rio de Janeiro...'
+      title: 'Egberto Gismont e Orquestra a Base de Sopros de Curitiba',
+      text: 'Egberto Gismonti nasceu em Carmo, município do Rio de Janeiro...'
     },
     {
       imgSrc1: './assets/cards/Gilberto_Monteiro.png',
       imgSrc2: './assets/cards/release.png',
       link1: '#',
       link2: './assets/pdf/Gilberto_Monteiro.pdf',
-      title: 'Gilberto Monteiro',
-      text: 'Nascido na cidade de Santiago do Boqueirão, no Rio Grande do Sul, Gilberto Monteiro é considerado ...'
+      title: 'Gilberto Monteiro e Sucinta Orquestra',
+      text: 'Nascido na cidade de Santiago do Boqueirão, no Rio Grande do Sul, Gilberto Monteiro é considerado um dos maiores gaiteiros...'
     },
     {
       imgSrc1: './assets/cards/Moarcir_Luz.png',
       imgSrc2: './assets/cards/release.png',
       link1: '#',
       link2: './assets/pdf/Moarcir_Luz.pdf',
-      title: 'Moarcir Luz',
-      text: 'Cantor, compositor e cavaquinista, nascido em Niterói, Rio de Janeiro. Participou de grandes projetos...'
+      title: 'Moacyr Luz e Samba do Trabalhador',
+      text: 'Sentindo falta de estar com os amigos para fazer uma batucada daquelas, Moacyr Luz só conseguiu encontrar um único dia livre...'
     },
     {
       imgSrc1: './assets/cards/O_Trio.png',
@@ -64,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link1: '#',
       link2: './assets/pdf/O_Trio.pdf',
       title: 'O Trio',
-      text: 'Foi criado em 1987, para homenagear Radamés Gnattali no seu aniversário de 80 anos. A partir desta...'
+      text: 'Foi criado em 1987, para homenagear Radamés Gnattali no seu aniversário de 80 anos. A partir desta primeira apresentação, quando interpretou obras de...'
     }
   ];
 
@@ -110,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const text = document.createElement('p');
     text.innerText = cardData.text || 'Descrição do evento';
     text.style.color = '#000';
-    text.style.marginTop = '9px';
+    text.style.marginTop = '4px';
     text.style.fontSize = '14px'; // Ajusta o tamanho do texto
     textAndImageContainer.appendChild(text);
 
@@ -124,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     img2.alt = cardData.imgAlt2 || 'Image 2';
     img2.style.width = '120px'; // Ajusta o tamanho da segunda imagem
     img2.style.height = 'auto'; // Mantém a proporção da imagem
-    img2.style.marginTop = '10px'; // Espaço entre o texto e a imagem do release
+    img2.style.marginTop = '1px'; // Espaço entre o texto e a imagem do release
     imgLink2.appendChild(img2);
     textAndImageContainer.appendChild(imgLink2);
 

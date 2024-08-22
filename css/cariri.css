@@ -217,7 +217,6 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 1rem;
     width: 90%;
     height: 100%;
@@ -279,7 +278,7 @@ p {
     border: none;
     cursor: pointer;
     text-align: center;
-    margin-top: 4rem; /* Move para baixo */
+    margin-top: 3rem; /* Move para baixo */
     margin-left: 5rem; /* Move para a direita */
     transition: background 0.3s, box-shadow 0.3s; /* Transição suave */
 }
@@ -336,9 +335,9 @@ p {
 }
 .card {
     width: 341px;
-    height: 534px;
+    height: 539px;
     background: #F7941D;
-    margin: 10px;
+    margin: 40px;
     box-sizing: border-box;
     padding: 20px;
     display: inline-block;
@@ -384,7 +383,7 @@ p {
     gap: 20px;
     width: 100%;
     margin: 0 auto;
-    padding: 2em;
+
 }
 
 /* Seção de logos de patrocínio */
@@ -411,19 +410,23 @@ p {
     align-items: center; /* Centraliza os itens verticalmente */
 }
 
-/* Estilo para as imagens de logo */
 .regua_logo {
-    width: 150px; /* Ajuste o tamanho padrão conforme necessário */
-    height: 150px; /* Define uma altura fixa para todas as imagens */
-    object-fit: contain; /* Mantém a proporção da imagem sem distorcer */
+    width: 190px;
+    /* Ajuste o tamanho padrão conforme necessário */
+    height: 190px;
+    /* Define uma altura fixa para todas as imagens */
+    object-fit: contain;
+    /* Mantém a proporção da imagem sem distorcer */
     margin: 0 auto;
 }
 
 /* Estilo específico para as logos da Petrobras e Governo Federal */
 .petrobras-logo,
 .governo-federal-logo {
-    width: 200px; /* Ajuste o tamanho conforme necessário */
-    height: 200px; /* Define uma altura maior para essas imagens */
+    width: 320px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 320px;
+    /* Define uma altura maior para essas imagens */
 }
 
 /* Seção de conteúdo de patrocínio */
